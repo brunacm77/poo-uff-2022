@@ -43,11 +43,13 @@ public class Porta {
     }
 
     void abrir() {
+
         this.portaAberta = true;
         System.out.println("Abrindo a porta");
     }
 
     void fechar() {
+
         this.portaAberta = false;
         System.out.println("Fechando a porta");
     }
