@@ -7,7 +7,7 @@ package aniversario;
 
 /**
  *
- * @author Bruna
+ * @author Bruna Moraes
  */
 public class Main {
 
