@@ -26,6 +26,8 @@ public class Porta {
 
     void alterarDimensao() {
 
+     do {
+        
         System.out.println("Para alterar a dimensão... ");
         Scanner inputA = new Scanner(System.in);
         System.out.println("Digite a altura: ");
@@ -34,13 +36,17 @@ public class Porta {
         Scanner inputC = new Scanner(System.in);
         System.out.println("Digite o comprimento: ");
         comprimento = inputC.nextFloat();
-
-        if (altura < comprimento) {
+        
+        if ( comprimento > altura ) {
+            
             System.out.println("Não é possivel fabricar este tipo de dimensao como porta.");
-        } else {
-            System.out.println("A porta modificada tem " + altura + " cm e " + comprimento + " cm ");
         }
+        
+        } while ( comprimento > altura );
+
+        System.out.println("A porta modificada tem " + altura + " cm e " + comprimento + " cm ");
     }
+    
 
     void abrir() {
 
@@ -48,18 +54,27 @@ public class Porta {
         System.out.println("Abrindo a porta");
     }
 
+    
     void fechar() {
 
         this.portaAberta = false;
         System.out.println("Fechando a porta");
     }
 
+    
     void pintar() {
 
         Scanner inputNum = new Scanner(System.in);
-        System.out.println("Escolha o codigo da cor que quer pintar: ");
+        System.out.println(" -------------------- ");
+        System.out.println(" Escolha um codigo de tinta para a porta: ");
+        System.out.println(" cod 1 | Branco ");
+        System.out.println(" cod 2 | Azul ");
+        System.out.println(" cod 3 | Verde ");
+        System.out.println(" cod 4 | Lilas ");
+        System.out.println(" cod 5 | Preto ");
+        System.out.println(" -------------------- ");
         int numeroCor = inputNum.nextInt();
-
+        System.out.println(" Pintando a porta... ");
         switch (numeroCor) {
 
             case 1:
